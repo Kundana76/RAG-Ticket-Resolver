@@ -1,0 +1,56 @@
+ticket_id,ticket_text,category,urgency,sentiment
+T-001,"Payment failed after checkout, money deducted but order not placed",payment,high,negative
+T-002,I was charged twice for the same order last week,payment,high,negative
+T-003,My credit card was declined even though it has sufficient balance,payment,medium,negative
+T-004,Refund not received after 10 days of cancellation,refund,high,negative
+T-005,I requested a refund 2 weeks ago but still no credit in my account,refund,high,negative
+T-006,"Partial refund received, missing ₹500 from the total",refund,medium,negative
+T-007,"Unable to login, password reset email not arriving",login,high,negative
+T-008,Account locked after 3 failed login attempts,login,high,negative
+T-009,Two-factor authentication code not working,login,medium,negative
+T-010,"Cannot reset password, reset link expired immediately",login,medium,negative
+T-011,"Order delayed by 2 weeks, no tracking update",delivery,high,negative
+T-012,Package shows delivered but I never received it,delivery,high,negative
+T-013,"Wrong item delivered, need exchange or refund",delivery,medium,negative
+T-014,"Delivery agent did not attempt delivery, marked as failed",delivery,medium,negative
+T-015,API returning 500 errors on all endpoints since morning,technical,critical,negative
+T-016,Webhook integration stopped working after last update,technical,high,negative
+T-017,App crashes on iOS 17 when opening settings,technical,high,negative
+T-018,"Dashboard not loading, stuck on spinner",technical,medium,negative
+T-019,Payment gateway timeout during peak hours,payment,critical,negative
+T-020,UPI payment failed but amount deducted from bank,payment,high,negative
+T-021,Subscription auto-renewal charged without notification,payment,medium,negative
+T-022,Invoice not generated after successful payment,payment,low,neutral
+T-023,Refund initiated but not reflecting in bank after 7 days,refund,high,negative
+T-024,Cashback not credited after eligible purchase,refund,medium,neutral
+T-025,Order cancelled but refund not initiated,refund,high,negative
+T-026,Social login with Google not working,login,medium,negative
+T-027,"Session expires too quickly, logged out every 5 minutes",login,low,negative
+T-028,Profile picture not updating after upload,login,low,neutral
+T-029,Email verification link not working,login,medium,negative
+T-030,Shipment stuck at customs for 3 weeks,delivery,high,negative
+T-031,Delivery address not updated despite multiple requests,delivery,medium,negative
+T-032,Express delivery not delivered on promised date,delivery,high,negative
+T-033,Tracking number shows invalid on courier website,delivery,medium,negative
+T-034,Database connection timeout in production environment,technical,critical,negative
+T-035,SSL certificate expired causing HTTPS errors,technical,critical,negative
+T-036,Memory leak in background service causing crashes,technical,high,negative
+T-037,Search functionality returning incorrect results,technical,medium,negative
+T-038,Push notifications not being received on Android,technical,medium,negative
+T-039,Payment method not saved after adding card,payment,medium,negative
+T-040,Discount coupon not applying at checkout,payment,medium,neutral
+T-041,EMI option not available for eligible products,payment,low,neutral
+T-042,Refund processed to wrong account,refund,high,negative
+T-043,Return pickup not scheduled after refund approval,refund,medium,negative
+T-044,Account suspended without any prior notice,login,high,negative
+T-045,Unable to change registered email address,login,medium,neutral
+T-046,Bulk order delivery split without notification,delivery,medium,neutral
+T-047,Fragile item delivered damaged,delivery,high,negative
+T-048,API rate limit too restrictive for enterprise plan,technical,medium,neutral
+T-049,Export to CSV feature not working in dashboard,technical,low,neutral
+T-050,Mobile app not syncing with web dashboard,technical,medium,negative
+T-051,Payment declined for international card,payment,medium,negative
+T-052,Subscription plan downgrade not reflected,payment,medium,neutral
+T-053,Refund amount incorrect after partial return,refund,medium,negative
+T-054,Login works on web but not on mobile app,login,medium,negative
+T-055,Order tracking page shows blank,delivery,low,neutral

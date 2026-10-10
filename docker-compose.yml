@@ -1,0 +1,18 @@
+services:
+  valkey:
+    image: valkey/valkey-bundle:9-alpine
+    ports: ["6379:6379"]
+
+  backend:
+    build: .
+    env_file: .env
+    environment:
+      VALKEY_URL: redis://valkey:6379
+      CORS_ORIGINS: http://localhost:3000
+    depends_on: [valkey]
+    ports: ["8000:8000"]
+
+  frontend:
+    build: ./frontend
+    depends_on: [backend]
+    ports: ["3000:80"]

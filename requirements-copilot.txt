@@ -1,0 +1,26 @@
+# Valkey AI Support Copilot — Backend Requirements
+# Build Beyond Limits Hackathon | Powered by Valkey
+
+# Core API
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.0.0
+
+# ML & Embeddings
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.4
+
+# LLM
+groq>=0.4.0
+
+# Valkey/Redis client
+redis>=5.0.0
+fakeredis>=2.20.0
+
+# Data
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Utilities
+python-dotenv>=1.0.0
+requests>=2.31.0

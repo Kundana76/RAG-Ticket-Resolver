@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --valkey-purple: #7B2FBE;
+    --valkey-dark: #0d0720;
+    --valkey-mid: #1a0a2e;
+    --valkey-card: #1e1035;
+    --valkey-border: rgba(123,47,190,0.3);
+    --valkey-green: #00e676;
+    --valkey-red: #ff1744;
+    --valkey-amber: #ffd600;
+    --valkey-text: #ede7f6;
+    --valkey-muted: #9575cd;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: linear-gradient(135deg, #0d0720 0%, #1a0a2e 50%, #16213e 100%);
+    color: var(--valkey-text);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #1a0a2e; }
+  ::-webkit-scrollbar-thumb { background: #7B2FBE; border-radius: 3px; }
+
+  /* Tawk.to widget — always visible, fixed position, never hidden */
+  iframe[title="chat widget"],
+  #tawk-bubble-container,
+  .tawk-min-container,
+  [class*="tawk"] {
+    z-index: 9999 !important;
+    position: fixed !important;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(30, 16, 53, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(123, 47, 190, 0.3);
+    border-radius: 12px;
+  }
+
+  .glow-green { box-shadow: 0 0 20px rgba(0, 230, 118, 0.15); }
+  .glow-red   { box-shadow: 0 0 20px rgba(255, 23, 68, 0.15); }
+  .glow-purple{ box-shadow: 0 0 20px rgba(123, 47, 190, 0.2); }
+
+  .badge-resolved {
+    background: rgba(0,230,118,0.15);
+    color: #00e676;
+    border: 1px solid rgba(0,230,118,0.3);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .badge-escalated {
+    background: rgba(255,23,68,0.15);
+    color: #ff1744;
+    border: 1px solid rgba(255,23,68,0.3);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+  .badge-draft {
+    background: rgba(255,214,0,0.15);
+    color: #ffd600;
+    border: 1px solid rgba(255,214,0,0.3);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #7B2FBE, #9B59D0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #9B59D0, #7B2FBE);
+    box-shadow: 0 0 20px rgba(123,47,190,0.4);
+    transform: translateY(-1px);
+  }
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .input-field {
+    background: rgba(30,16,53,0.8);
+    border: 1px solid rgba(123,47,190,0.3);
+    border-radius: 8px;
+    color: #ede7f6;
+    padding: 10px 14px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .input-field:focus {
+    border-color: #7B2FBE;
+    box-shadow: 0 0 0 2px rgba(123,47,190,0.2);
+  }
+  .input-field::placeholder { color: #6b5b8a; }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #9575cd;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .nav-item:hover { background: rgba(123,47,190,0.15); color: #ede7f6; }
+  .nav-item.active {
+    background: rgba(123,47,190,0.25);
+    color: #ede7f6;
+    border-left: 3px solid #7B2FBE;
+  }
+
+  .spike-banner {
+    background: linear-gradient(90deg, rgba(255,23,68,0.2), rgba(183,28,28,0.2));
+    border: 1px solid rgba(255,23,68,0.4);
+    border-left: 4px solid #ff1744;
+    border-radius: 8px;
+    padding: 12px 16px;
+    animation: pulse-border 2s infinite;
+  }
+  @keyframes pulse-border {
+    0%,100% { border-left-color: #ff1744; }
+    50% { border-left-color: #ff6b6b; }
+  }
+
+  .confidence-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(123,47,190,0.2);
+    overflow: hidden;
+  }
+  .confidence-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.6s ease;
+  }
+}
